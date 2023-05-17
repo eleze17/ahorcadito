@@ -1,21 +1,65 @@
 import { useEffect, useState } from 'react';
 import {usePalabra} from './hooks/usePalabra.js'
 import React from 'react'
+import { abcdario } from './abcdario'
+import {palabras} from './assets/arraypalabras.js'
+import { Ahorcado } from './Ahorcado.jsx';
+ 
 
-export const Palabra = ({palabra}) => {
-
-const { palabrabuscada} = usePalabra( palabra );
+export const Palabra = ({categoria}) => {
 
 
-return <>
-<h1>PALABRA BUSCADA</h1>
+ 
+let palabra  
+
+const [ahorcado, setahorcado] = useState('')
+const { palabrabuscada,armajuego,error,completado } = usePalabra(ahorcado);
+
+
+useEffect(() => {
+    let {[categoria]: cat} = palabras
+    let random = Math.floor(Math.random() * 10)
+    palabra =  cat[random] 
+    setahorcado(palabra)
     
-        { palabrabuscada?.map((letra,index)=>{
-            return(<div style={{display:"inline-block"}} key={index}>
-                        <span id={`letra${index}`} style={{marginRight:"20px"}}>{letra}
-                        </span>
-                    </div>)
-})}
+}, [categoria,completado])
 
-</>
-}
+
+
+return( 
+<div className='principal'>
+        <h1>PALABRA BUSCADA</h1>
+            <div style={{display:"inline-block"}} >
+
+                { palabrabuscada?.map((letra,index)=>{
+                    return( <span key={index} id={`letra${index}`} style={{marginRight:"20px"}}>{letra}
+                                </span>
+                         
+                            )})}
+        </div>
+        
+        <h3>Elegir Letras</h3>
+        <div style={{display:"flex"}}>
+        <img src='./src/assets/tizi.png' style={{width:"200px"}} id='tizi'></img>
+        
+        <div  className='botonera'>
+                            <div style={{width:"700px"}}>
+                            {abcdario.map((letra,index)=>{
+                                return(
+                                <button key={index} id='botonLetra' onClick={(e)=>{armajuego(e.target)
+                                                              e.target.disabled = true  
+                                                            
+                                                            }  
+                                } value={letra}>{letra}</button>
+                                )
+                    
+                            })}
+                            </div>
+                            
+
+        </div>
+        </div> 
+        <Ahorcado statusimage={error}></Ahorcado>               
+       <audio id="audio-error"src='./src/assets/windows-error-sound-effect-35894.mp3'></audio>
+        
+        </div> )}
