@@ -37,7 +37,7 @@ export const usePalabra = (palabraoculta) => {
     else{
 
       if(target){
-        console.log(target)
+        
         let clas
          auxencontrada = palabrabuscada.slice()
          arr.forEach((element,i) => {

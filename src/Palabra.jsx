@@ -38,8 +38,6 @@ useEffect(() => {
 
 
 
-console.log(ahorcado)
-
 return( 
 <div className='principal'>
         <h1>PALABRA BUSCADA</h1>
