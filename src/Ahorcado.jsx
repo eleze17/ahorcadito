@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const Ahorcado = ({statusimage}) => {
-    console.log(statusimage)
+   
+  console.log(statusimage)
+
   return (
     <div style={{width:"80vw",
                 display:"flex",

@@ -8,23 +8,37 @@ import { Ahorcado } from './Ahorcado.jsx';
 
 export const Palabra = ({categoria}) => {
 
-
- 
 let palabra  
 
 const [ahorcado, setahorcado] = useState('')
-const { palabrabuscada,armajuego,error,completado } = usePalabra(ahorcado);
 
+
+function palabraAzar() {
+let {[categoria]: cat} = palabras
+let random = Math.floor(Math.random() * cat.length)
+palabra =  cat[random] 
+setahorcado(palabra)
+}
+
+const { palabrabuscada,armajuego,error,completado ,letras,primermov} = usePalabra(ahorcado);
 
 useEffect(() => {
-    let {[categoria]: cat} = palabras
-    let random = Math.floor(Math.random() * 10)
-    palabra =  cat[random] 
-    setahorcado(palabra)
-    
+    palabraAzar()  
+    primermov.current = true
 }, [categoria,completado])
 
+useEffect(() => {
+     armajuego()
+}, [ahorcado])
 
+useEffect(() => {
+    
+    letras()
+  }, [palabrabuscada,error])
+
+
+
+console.log(ahorcado)
 
 return( 
 <div className='principal'>
