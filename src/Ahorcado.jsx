@@ -5,7 +5,7 @@ export const Ahorcado = ({statusimage}) => {
   console.log(statusimage)
 
   return (
-    <div style={{width:"80vw",
+    <div style={{width:"20vw",
                 display:"flex",
                 justifyContent:"flex-end"                
     

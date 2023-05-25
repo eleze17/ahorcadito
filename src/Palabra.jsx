@@ -51,7 +51,7 @@ return(
         </div>
         
         <h3>Elegir Letras</h3>
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex", width:"1200px"}}>
         <img src='/tizi.png' style={{width:"200px"}} id='tizi'></img>
         
         <div  className='botonera'>
@@ -70,8 +70,9 @@ return(
                             
 
         </div>
+        <Ahorcado statusimage={error}></Ahorcado>            
         </div> 
-        <Ahorcado statusimage={error}></Ahorcado>               
+          <h3>SI PERDEMOS NO LLORAMOS</h3>
        <audio id="audio-error"src='/windows-error-sound-effect-35894.mp3'></audio>
         
         </div> )}
