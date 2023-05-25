@@ -68,7 +68,9 @@ if(!primermov.current && arr.toString()===palabrabuscada.toString() ){
             Swal.fire({
             title: 'Finish',
             text: 'Juego terminado,Genio',
-            icon: 'success',
+            width:600,
+        imageHeight:150,
+            imageUrl: '/ganador.png',
             confirmButtonText: 'Siguiente'
             })
             setcompletado(!completado)
@@ -86,7 +88,9 @@ if(!primermov.current && arr.toString()===palabrabuscada.toString() ){
       Swal.fire({
         title: 'Finish',
         text: 'Juego terminado,sos horrible anda a estudiar',
-        icon: 'error',
+        imageUrl: '/perdedor.png',
+        width:600,
+        imageHeight:150,
         confirmButtonText: 'Muerto'
       })
       setcompletado(!completado)

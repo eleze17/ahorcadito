@@ -51,11 +51,11 @@ return(
         </div>
         
         <h3>Elegir Letras</h3>
-        <div style={{display:"flex", width:"1200px"}}>
-        <img src='/tizi.png' style={{width:"200px"}} id='tizi'></img>
+        <div style={{display:"flex", width:"100vw"}}>
+        <img src='/tizi.png' style={{width:"15%"}} id='tizi'></img>
         
         <div  className='botonera'>
-                            <div style={{width:"700px"}}>
+                            <div style={{width:"70%"}}>
                             {abcdario.map((letra,index)=>{
                                 return(
                                 <button key={index} id='botonLetra' onClick={(e)=>{armajuego(e.target)
