@@ -48,22 +48,22 @@ useEffect(() => {
 
 return( 
 <div className='principal'>
-        <h1>PALABRA BUSCADA</h1>
-            <div style={{display:"inline-block"}} >
+        <h3>PALABRA BUSCADA</h3>
+            <div  className='buscadacontainer' >
 
                 { palabrabuscada?.map((letra,index)=>{
-                    return( <span key={index} id={`letra${index}`} style={{marginRight:"1rem"}}>{letra}
+                    return( <span key={index} id={`letra${index}`}>{letra}
                                 </span>
                          
                             )})}
         </div>
         
         <h3>Elegir Letras</h3>
-        <div style={{display:"flex", width:"100vw"}}>
-        <img src='/tizi.png' style={{width:"20%", height:"20%"}} id='tizi'></img>
+        <div className='letrascontainer'>
+        <img src='/tizi.png' id='tizi'></img>
         
         <div  className='botonera'>
-                            <div style={{width:"70%"}}>
+                            <div>
                             {abcdario.map((letra,index)=>{
                                 return(
                                 <button key={index} id='botonLetra' onClick={(e)=>{armajuego(e.target)

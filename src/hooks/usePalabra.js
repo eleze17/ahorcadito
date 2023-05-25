@@ -10,7 +10,7 @@ export const usePalabra = (palabraoculta) => {
   const primermov= useRef(true)
   let auxencontrada 
   let arr  = Array.from(palabraoculta)
-
+  
 
     
    
