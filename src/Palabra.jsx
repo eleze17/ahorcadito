@@ -52,7 +52,7 @@ return(
             <div style={{display:"inline-block"}} >
 
                 { palabrabuscada?.map((letra,index)=>{
-                    return( <span key={index} id={`letra${index}`} style={{marginRight:"20px"}}>{letra}
+                    return( <span key={index} id={`letra${index}`} style={{marginRight:"1rem"}}>{letra}
                                 </span>
                          
                             )})}
@@ -60,7 +60,7 @@ return(
         
         <h3>Elegir Letras</h3>
         <div style={{display:"flex", width:"100vw"}}>
-        <img src='/tizi.png' style={{width:"15%"}} id='tizi'></img>
+        <img src='/tizi.png' style={{width:"20%", height:"20%"}} id='tizi'></img>
         
         <div  className='botonera'>
                             <div style={{width:"70%"}}>

@@ -20,7 +20,7 @@ export const usePalabra = (palabraoculta) => {
     let aux = [] 
     
      for(let i = 0 ; i < palabraoculta.length; i++) {
-           aux.push('_____')
+           aux.push('__')
            setpalabra(aux.slice())
           }
       let botones = document.querySelectorAll('#botonLetra')
