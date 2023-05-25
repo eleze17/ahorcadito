@@ -65,7 +65,10 @@ function letras(){
 if(!primermov.current && arr.toString()===palabrabuscada.toString() ){
 
     console.log(primermov.current + '    ' +arr.toString() + '    ' +  palabrabuscada.toString() + '   '+  completado.current) 
-            Swal.fire({
+    let sonido = document.getElementById('audio-gane')
+      sonido.play()         
+    
+    Swal.fire({
             title: 'Finish',
             text: 'Juego terminado,Genio',
             width:600,
@@ -85,6 +88,8 @@ if(!primermov.current && arr.toString()===palabrabuscada.toString() ){
 
     if(error===6 ){
       console.log('error nro   '+ error )
+      let sonido = document.getElementById('audio-perdi')
+      sonido.play()  
       Swal.fire({
         title: 'Finish',
         text: 'Juego terminado,sos horrible anda a estudiar',

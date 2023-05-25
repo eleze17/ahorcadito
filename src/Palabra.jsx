@@ -9,7 +9,8 @@ import { Ahorcado } from './Ahorcado.jsx';
 export const Palabra = ({categoria}) => {
 
 let palabra  
-
+let palabraUsadas = []
+let vuelta = 0
 const [ahorcado, setahorcado] = useState('')
 
 
@@ -17,7 +18,14 @@ function palabraAzar() {
 let {[categoria]: cat} = palabras
 let random = Math.floor(Math.random() * cat.length)
 palabra =  cat[random] 
+
+if(palabraUsadas.includes(palabra) && vuelta < 10){
+    palabraAzar()
+}
+palabraUsadas.push(palabra)
+vuelta++ 
 setahorcado(palabra)
+
 }
 
 const { palabrabuscada,armajuego,error,completado ,letras,primermov} = usePalabra(ahorcado);
@@ -74,5 +82,7 @@ return(
         </div> 
           <h3>SI PERDEMOS NO LLORAMOS</h3>
        <audio id="audio-error"src='/windows-error-sound-effect-35894.mp3'></audio>
+       <audio id="audio-perdi"src='/perdi.mp3'></audio>
+       <audio id="audio-gane"src='/gane.mp3'></audio>
         
         </div> )}
