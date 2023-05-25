@@ -11,7 +11,7 @@ export const Ahorcado = ({statusimage}) => {
     
     
     }}> 
-       {statusimage>0? <img src={`./src/assets/ahorcado${statusimage}.JPG`} alt="" /> :''}
+       {statusimage>0? <img src={`./public/ahorcado${statusimage}.JPG`} alt="" /> :''}
    </div>
   )
 }
