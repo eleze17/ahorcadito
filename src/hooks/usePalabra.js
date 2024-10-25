@@ -19,8 +19,12 @@ export const usePalabra = (palabraoculta) => {
     if(primermov.current && palabraoculta){
     let aux = [] 
     
-     for(let i = 0 ; i < palabraoculta.length; i++) {
-           aux.push('__')
+     for(let i = 0 ; i < arr.length; i++) {
+          if(arr[i] === ' '){
+            aux.push(' ') 
+          }else{ aux.push('__')
+          }
+          
            setpalabra(aux.slice())
           }
       let botones = document.querySelectorAll('#botonLetra')

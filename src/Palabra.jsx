@@ -48,7 +48,8 @@ useEffect(() => {
 
 return( 
 <div className='principal'>
-        <h3>PALABRA BUSCADA</h3>
+        <h3>PALABRA BUSCADA </h3>
+        <h4 className='categoria'>{categoria}</h4>
             <div  className='buscadacontainer' >
 
                 { palabrabuscada?.map((letra,index)=>{

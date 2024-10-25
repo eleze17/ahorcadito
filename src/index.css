@@ -68,6 +68,122 @@ justify-content: center;}
 
 }
 
+.dropdown{display: inline-block;
+font-size: 25px;
+position: relative;
+left: 20%;}
+.dropdown-menu{background-color: rgb(51, 49, 49);}
+.dropdown-item{font-size: 20px;
+color: beige;}
+
+
+
+.contenedor{
+  display:grid;
+  grid-template-columns: repeat(8 , 1fr);
+  grid-gap: 10px; 
+  grid-auto-rows: minmax(100px, auto);
+ 
+}
+
+.memoria{
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+.memoriaabsoluta{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  }
+
+
+.cardfront{
+background-color: rgb(224, 20, 20);
+text-align: center;
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: 10;
+border-radius: 50%;
+}
+
+
+
+
+.cardback{
+  background-color: rgb(0, 255, 55);
+  position: absolute;
+  backface-visibility: hidden;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  border-radius: 50%;
+  
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+.mostrar{
+  z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 700px) {
 
@@ -106,7 +222,9 @@ justify-content: center;}
   h3{font-size: 20px;
   
   
-  }
+  }}
 
   
-
+.categoria{
+  color: rgb(240, 90, 230);
+}
